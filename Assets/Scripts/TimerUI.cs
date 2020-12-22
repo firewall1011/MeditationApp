@@ -5,13 +5,13 @@ namespace TiagoTijolo
 {
     public class TimerUI : MonoBehaviour
     {
-        [SerializeField] private Timer timer = null;
-        [SerializeField] private TextMeshProUGUI _timeText = null;
-        [SerializeField] private string stringFormat = "F0";
+        [SerializeField] protected Timer timer = null;
+        [SerializeField] protected TextMeshProUGUI _timeText = null;
+        [SerializeField] protected string stringFormat = "F0";
 
         protected virtual void UpdateUI() 
         {
-            _timeText.SetText(GetRemainingTime().ToString(stringFormat));
+            _timeText.SetText(GetPassedTime().ToString(stringFormat));
         }
 
         protected virtual void Update()

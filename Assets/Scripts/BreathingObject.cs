@@ -1,32 +1,41 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace TiagoTijolo
 {
     public class BreathingObject : MonoBehaviour
     {
         [SerializeField] private BreathingData breathingData = default;
-        
-        private Animator _animator = null;
-        
-        private void Awake()
+
+        private float ScaleTime => breathingData.BreathingTime / 2f;
+
+        public void Show()
         {
-            _animator = GetComponent<Animator>();
+            GetComponent<Image>().enabled = true;
+        }
+
+        public void Hide()
+        {
+            GetComponent<Image>().enabled = false;
         }
 
         private void OnInpirationStarted()
         {
-            _animator.Play("ScaleUp");
+            iTween.ScaleTo(gameObject, iTween.Hash("time", ScaleTime, 
+                                        "scale", Vector3.one * 3f, 
+                                        "easetype", iTween.EaseType.linear));
         }
 
         private void OnExpirationStarted()
         {
-            _animator.Play("ScaleDown");
+            iTween.ScaleTo(gameObject, iTween.Hash("time", ScaleTime,
+                                        "scale", Vector3.one,
+                                        "easetype", iTween.EaseType.linear));
+
         }
 
         private void OnEnable()
         {
-            _animator.speed = 2f / breathingData.BreathingTime;
             breathingData.OnInspirationStarted.AddListener(OnInpirationStarted);
             breathingData.OnExpirationStarted.AddListener(OnExpirationStarted);
         }
@@ -36,7 +45,5 @@ namespace TiagoTijolo
             breathingData.OnInspirationStarted.RemoveListener(OnInpirationStarted);
             breathingData.OnExpirationStarted.RemoveListener(OnExpirationStarted);
         }
-
-
     }
 }

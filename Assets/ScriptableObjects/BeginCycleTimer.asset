@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27cab9d5e6c116f4db5e152f9d96f424, type: 3}
   m_Name: BeginCycleTimer
   m_EditorClassIdentifier: 
-  CountTime: 3
+  CountTime: 1

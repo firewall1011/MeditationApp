@@ -19,4 +19,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   MaxBreathingTimes: 10
-  BreathingTime: 0.8
+  BreathingTime: 2

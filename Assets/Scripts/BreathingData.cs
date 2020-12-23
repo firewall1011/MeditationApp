@@ -9,8 +9,10 @@ namespace TiagoTijolo
         public UnityEvent OnInspirationStarted = new UnityEvent();
         public UnityEvent OnExpirationStarted = new UnityEvent();
         
-        [Range(10, 40)]
+        [Range(1, 40)]
         public int MaxBreathingTimes = 30;
         public float BreathingTime = 1f;
+        public float FullLungHoldingTime = 15f;
+        public float LastEmptyLungHoldingTime = 0f;
     }
 }

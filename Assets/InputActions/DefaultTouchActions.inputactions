@@ -1,0 +1,96 @@
+{
+    "name": "DefaultTouchActions",
+    "maps": [
+        {
+            "name": "DefaultActions",
+            "id": "f9c8188f-9560-4752-a1ce-a4d6b8b2e2a6",
+            "actions": [
+                {
+                    "name": "Double-Tap",
+                    "type": "Button",
+                    "id": "2bdb58ad-ea1b-45a9-a599-bdd3ca0a2494",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "MultiTap"
+                },
+                {
+                    "name": "Hold",
+                    "type": "Button",
+                    "id": "874e6ec6-31af-4ae2-98a7-46cd1a2a5309",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold(duration=1)"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "de1f2cc2-6869-4dc3-ac46-820f92fe4e89",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Double-Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a942774-057b-40f7-a95b-d5a58f6d32f1",
+                    "path": "<Pointer>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Double-Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ba385a5-80b9-4912-8896-5fede35022cf",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Double-Tap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7da54aad-199a-46fd-9fac-719ce772cd46",
+                    "path": "<Touchscreen>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9952da41-be20-4078-9fe2-c95ce93cb1e4",
+                    "path": "<Pointer>/primaryTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d1f95e51-2129-45c9-83e8-1ac4fd90a07c",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hold",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

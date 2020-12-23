@@ -18,5 +18,7 @@ MonoBehaviour:
   OnExpirationStarted:
     m_PersistentCalls:
       m_Calls: []
-  MaxBreathingTimes: 10
+  MaxBreathingTimes: 30
   BreathingTime: 2
+  FullLungHoldingTime: 15
+  LastEmptyLungHoldingTime: 0

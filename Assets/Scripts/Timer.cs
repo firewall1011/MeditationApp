@@ -31,6 +31,8 @@ namespace TiagoTijolo
 
         public void StopTimer() => _count = false;
 
+        public void RestartTimer() => _timer = 0f;
+
         private void Update()
         {
             if (_count)
